@@ -7,7 +7,6 @@ nbproject/*
 build.xml
 manifest.mf
 # Package Files #
-*.jar
 *.war
 *.ear
 
