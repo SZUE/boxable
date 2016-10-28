@@ -23,7 +23,17 @@ def getVersionName = {
 ext.commonVersion = getVersionName()
 version = "${commonVersion}".toString()
 
-group = 'com.github.dgautier'
+group = 'stz'
+
+task sourceJar(type: Jar) {
+	from sourceSets.main.allJava
+	classifier 'sources'
+}
+
+artifacts {
+	archives jar
+	archives sourceJar
+}
 
 repositories {
 	mavenCentral()
