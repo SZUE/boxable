@@ -23,7 +23,7 @@ def getVersionName = {
 ext.commonVersion = getVersionName()
 version = "${commonVersion}".toString()
 
-group = 'stz'
+group = 'szue'
 
 task sourceJar(type: Jar) {
 	from sourceSets.main.allJava
