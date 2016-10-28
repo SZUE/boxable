@@ -18,7 +18,10 @@ def getVersionName = {
 	}
 	return stdout.toString().trim()
 }
-version = getVersionName()
+
+ext.commonVersion = getVersionName()
+version = "${commonVersion}".toString()
+
 group = 'com.github.dgautier'
 
 repositories {
