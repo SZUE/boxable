@@ -3,9 +3,12 @@ task wrapper(type: Wrapper) {
 }
 
 apply plugin: 'java'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
 apply plugin: 'maven'
 
-sourceCompatibility = 1.7
+
 
 /*
  * Gets the version name from the latest Git tag
