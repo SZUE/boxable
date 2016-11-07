@@ -1,2 +1,10 @@
 language: java
 jdk: oraclejdk7
+deploy:
+  provider: releases
+  api_key:
+    secure: JSb6d//i/mBjoPLlvohhEqwQLmfbebgLsLaL1JcmQcNPm1ePc8iwS9yoqhnjgjCkmBNVvNZMmGkUX4bxLK7GoRF9TCgrhzriqD42rz+vCa0/d6HDhvn7PgzqHDMKpS9Qb1B3chIADpJIz4ODEKydfh3zpn6G0aGTksnDT95G4z7JOcmZBxtBldivK9KyGMLjlbEuaWKdap/plaRAZ/7b+9FGnyqgHDWGMBvC0fIUA/NCBqKmQrFkL+VJ4WNg4YVCm3XPZNt6LvXv8VCKmfn8yb3K+D3TZIRdwVW3xTNTFa6RzgrFqX7+kiVZ0UVjZQ34kBjvaSX/dJVj88qK0/juNu+s7rkIgKUbOi+FMVfrg+jQKBOtZPmYSqlj4XeOGB+POHTRMko+Q0MRyV1bfITEiVgH82GxseiXMXZHdD2MjiHNncZRkKRMczvNukGFFF0YBCCKAD913mq+bIWs3S9ZKTbgQG8KiyCoXlm+U2mILQhdEt1XTZwFqfPIPK14Xg+uh1AXr7oPGgnfdvl1Hl+bEiF4gzLfmIYWrIK/1qxAg7qL+YLxWeDwUBiz+kqPOxQCiaPLWQg2sA+GkQZrB/GxK92QYqLGajv0NnxWENnlHdout1/ZnJnMt2UBb5kDVovi1yUWaQ5gxGM4NN8oMr+3TgS2Rd25MTgbY1fYACEJXww=
+  file: ''
+  on:
+    repo: SZUE/boxable
+
