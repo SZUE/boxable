@@ -8,4 +8,4 @@ deploy:
   file: "build/lib/*.jar"
   on:
     repo: SZUE/boxable
-
+    tags: true
