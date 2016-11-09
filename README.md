@@ -1,9 +1,7 @@
 [Boxable](http://dhorions.github.io/boxable/) - A java library to build tables in PDF documents.
 =======
 
-[![Join the chat at https://gitter.im/dhorions/boxable](https://badges.gitter.im/dhorions/boxable.svg)](https://gitter.im/dhorions/boxable?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![Build Status](https://travis-ci.org/SZUE/boxable.svg?branch=master)](https://travis-ci.org/SZUE/boxable)
+[![Join the chat at https://gitter.im/dhorions/boxable](https://badges.gitter.im/dhorions/boxable.svg)](https://gitter.im/dhorions/boxable?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/SZUE/boxable.svg?branch=master)](https://travis-ci.org/SZUE/boxable)
 
 Boxable is a library that can be used to easily create tables in pdf documents.  It uses the [PDFBox](https://pdfbox.apache.org/) PDF library under the hood.
 
