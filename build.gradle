@@ -9,12 +9,6 @@ targetCompatibility = 1.7
 apply plugin: 'maven'
 apply plugin: 'jacoco'
 
-jacocoTestReport {
-    reports {
-        xml.enabled true
-    }
-}
-
 /*
  * Gets the version name from the latest Git tag
  */
@@ -59,3 +53,11 @@ dependencies {
 	testCompile 'junit:junit:4.12'
 	testCompile 'commons-io:commons-io:2.5'
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+	html.enabled true
+    }
+}
+
