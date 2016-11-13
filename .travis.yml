@@ -5,6 +5,8 @@ jdk:
   - oraclejdk7
   - openjdk7
 
+sudo: false
+
 deploy:
   provider: releases
   api_key:
