@@ -33,6 +33,10 @@ task sourceJar(type: Jar) {
 	classifier 'sources'
 }
 
+task listJars << {
+    configurations.compile.each { File file -> println file.name }
+}
+
 artifacts {
 	archives jar
 	archives sourceJar
@@ -43,10 +47,10 @@ repositories {
 }
 
 dependencies {
-	compile 'org.apache.pdfbox:pdfbox:2.0.0-RC2'
-	compile 'org.slf4j:slf4j-api:1.7.10'
-	compile 'com.google.guava:guava:18.0'
-	compile 'org.apache.commons:commons-csv:1.2'
+	compile 'org.apache.pdfbox:pdfbox:2.0.3'
+	compile 'org.slf4j:slf4j-api:1.7.21'
+	compile 'com.google.guava:guava:20.0'
+	compile 'org.apache.commons:commons-csv:1.4'
 	testCompile 'junit:junit:4.12'
-	testCompile 'commons-io:commons-io:2.4'
+	testCompile 'commons-io:commons-io:2.5'
 }
