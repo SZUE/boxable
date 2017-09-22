@@ -30,8 +30,10 @@ task sourceJar(type: Jar) {
 	classifier 'sources'
 }
 
-task listJars << {
-	configurations.compile.each { File file -> println file.name }
+task listJars {
+	doLast {
+		configurations.compile.each { File file -> println file.name }
+	}	
 }
 
 artifacts {
@@ -42,11 +44,11 @@ artifacts {
 repositories { mavenCentral() }
 
 dependencies {
-	compile 'org.apache.pdfbox:pdfbox:2.0.3'
-	compile 'org.slf4j:slf4j-api:1.7.21'
-	compile 'com.google.guava:guava:20.0'
-	compile 'org.apache.commons:commons-csv:1.4'
-	compile group: 'org.jsoup', name: 'jsoup', version: '1.9.2'
+	compile 'org.apache.pdfbox:pdfbox:2.0.7'
+	compile 'org.slf4j:slf4j-api:1.7.25'
+	compile 'com.google.guava:guava:23.0'
+	compile 'org.apache.commons:commons-csv:1.5'
+	compile group: 'org.jsoup', name: 'jsoup', version: '1.10.3'
 	testCompile 'junit:junit:4.12'
 	testCompile 'commons-io:commons-io:2.5'
 }
@@ -55,7 +57,7 @@ jacocoTestReport {
 	reports {
 		xml.enabled true
 		html.enabled true
-		html.destination "${buildDir}/reports/coverage"
+		html.destination file("${buildDir}/reports/coverage")
 	}
 }
 
