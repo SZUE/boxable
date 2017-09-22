@@ -5,7 +5,10 @@ jdk:
   - oraclejdk7
   - openjdk7
 
-sudo: false
+sudo: required
+dist: trusty
+
+group: edge
 
 deploy:
   provider: releases
