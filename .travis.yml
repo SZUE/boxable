@@ -2,13 +2,8 @@ language: java
 
 jdk: 
   - oraclejdk8
-  - oraclejdk7
-  - openjdk7
 
-sudo: required
-dist: trusty
-
-group: edge
+sudo: false
 
 deploy:
   provider: releases
