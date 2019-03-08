@@ -877,9 +877,14 @@ public abstract class Table<T extends PDPage> {
 				firstDataRowIndex++;
 			}
 		}
-
+		// to preserve more space we use atleast 5 data rows
+		firstDataRowIndex +=5;
+		
 		if (rows.size() > firstDataRowIndex) {
 			height += rows.get(firstDataRowIndex).getHeight();
+		} else if(rows.size() > firstDataRowIndex-4) {
+			// for small tables which doesn't have 5 data rows, we use then headers + 1 data row height
+			height += rows.get(firstDataRowIndex-4).getHeight();
 		}
 
 		return height;
