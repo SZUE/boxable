@@ -881,7 +881,9 @@ public abstract class Table<T extends PDPage> {
 		firstDataRowIndex +=5;
 		
 		if (rows.size() > firstDataRowIndex) {
-			height += rows.get(firstDataRowIndex).getHeight();
+			for(int i=0; i<5;i++) {
+				height += rows.get(firstDataRowIndex-i).getHeight();
+			}
 		} else if(rows.size() > firstDataRowIndex-4) {
 			// for small tables which doesn't have 5 data rows, we use then headers + 1 data row height
 			height += rows.get(firstDataRowIndex-4).getHeight();
