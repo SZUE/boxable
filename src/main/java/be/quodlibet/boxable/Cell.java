@@ -31,6 +31,7 @@ public class Cell<T extends PDPage> {
 	private WrappingFunction wrappingFunction;
 	private boolean isHeaderCell = false;
 	private boolean isColspanCell = false;
+	private boolean isHiddenCell = false;
 
 	// default padding
 	private float leftPadding = 5f;
@@ -742,6 +743,14 @@ public class Cell<T extends PDPage> {
 
 	public void setLineSpacing(float lineSpacing) {
 		this.lineSpacing = lineSpacing;
+	}
+
+	public boolean isHiddenCell() {
+		return isHiddenCell;
+	}
+
+	public void setHiddenCell(boolean isHiddenCell) {
+		this.isHiddenCell = isHiddenCell;
 	}
 
 }

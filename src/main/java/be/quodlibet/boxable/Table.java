@@ -279,6 +279,9 @@ public abstract class Table<T extends PDPage> {
 				// after a page break, we have to ensure that top borders get drawn
 				removeTopBorders = false;
 			}
+			
+			// if we had spanned first cell please show text when breaking in the new row
+			row.getCells().get(0).setHiddenCell(false);
 		}
 		// if it is first row in the table, we have to draw the top border
 		if (row == rows.get(0)) {
@@ -531,6 +534,11 @@ public abstract class Table<T extends PDPage> {
 				int italicCounter = 0;
 				int boldCounter = 0;
 
+				// if hidden cell then please empty the cell raw value
+				if(cell.isHiddenCell()) {
+					cell.setText("");
+				}
+				
 				// print all lines of the cell
 				for (Map.Entry<Integer, List<Token>> entry : cell.getParagraph().getMapLineTokens().entrySet()) {
 
