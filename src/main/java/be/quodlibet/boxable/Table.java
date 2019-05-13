@@ -280,8 +280,10 @@ public abstract class Table<T extends PDPage> {
 				removeTopBorders = false;
 			}
 			
-			// if we had spanned first cell please show text when breaking in the new row
-			row.getCells().get(0).setHiddenCell(false);
+			for(Cell cell : row.getCells()) {
+				cell.setHiddenCell(false);
+			}
+			
 		}
 		// if it is first row in the table, we have to draw the top border
 		if (row == rows.get(0)) {
