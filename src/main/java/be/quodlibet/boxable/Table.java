@@ -888,11 +888,9 @@ public abstract class Table<T extends PDPage> {
 				firstDataRowIndex++;
 			}
 		}
-		// to preserve more space we use atleast 5 data rows
-		firstDataRowIndex += getMindatarows();
-		
-		for(int i=0; i<firstDataRowIndex;i++) {
-			height += rows.get(firstDataRowIndex-i).getHeight();
+
+		for(int i=0; i< getMindatarows();i++) {
+			height += rows.get(firstDataRowIndex+i).getHeight();
 		}
 
 		return height;
