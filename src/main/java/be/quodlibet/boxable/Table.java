@@ -55,7 +55,8 @@ public abstract class Table<T extends PDPage> {
 	private boolean removeAllBorders = false;
 
 	private PageProvider<T> pageProvider;
-
+	private int mindatarows = 1;
+	
 	// page margins
 	private final float pageTopMargin;
 	private final float pageBottomMargin;
@@ -888,15 +889,10 @@ public abstract class Table<T extends PDPage> {
 			}
 		}
 		// to preserve more space we use atleast 5 data rows
-		firstDataRowIndex +=5;
+		firstDataRowIndex += getMindatarows();
 		
-		if (rows.size() > firstDataRowIndex) {
-			for(int i=0; i<5;i++) {
-				height += rows.get(firstDataRowIndex-i).getHeight();
-			}
-		} else if(rows.size() > firstDataRowIndex-4) {
-			// for small tables which doesn't have 5 data rows, we use then headers + 1 data row height
-			height += rows.get(firstDataRowIndex-4).getHeight();
+		for(int i=0; i<firstDataRowIndex;i++) {
+			height += rows.get(firstDataRowIndex-i).getHeight();
 		}
 
 		return height;
@@ -975,6 +971,14 @@ public abstract class Table<T extends PDPage> {
 
 	public void removeAllBorders(boolean removeAllBorders) {
 		this.removeAllBorders = removeAllBorders;
+	}
+
+	public int getMindatarows() {
+		return mindatarows;
+	}
+
+	public void setMindatarows(int mindatarows) {
+		this.mindatarows = mindatarows;
 	}
 
 }
